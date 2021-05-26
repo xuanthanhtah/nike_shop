@@ -1,0 +1,142 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color:#dbdbdb;
+    --header-heigth:155px;
+    --navbar-height:34px;
+    --header-width-search-height:60px;
+    --header-width-sale-height:calc(var(--header-heigth) - var(--navbar-height) - var(--header-width-search-height));
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 65.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto',sans-serif;
+    box-sizing: border-box;
+}
+/* responsive */
+.grid {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display:block;
+}
+
+.grid.wide {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.grid.wide.header-code {
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+/* grid_column 2 4 6 8 10 12 */
+.grid_column {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100%;
+}
+
+.grid_column-2 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
+}
+
+.grid_column-3 {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 33.3334%;
+}
+
+.grid_column-4 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 25%;
+}
+
+.grid_column-6 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 50%;
+}
+
+.grid_column-8 {
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 66.6667%;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }   
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }   
+
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
+/* btn */
+
+.btn  {
+    height: 40px;
+    min-width: 95px;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    padding: 0;
+    cursor: pointer;
+    background-color: var(--white-color);
+    color: var(--text-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6rem;
+}
+
+.btn:hover {
+    background-color: #d3d1d1;
+}
+
+.btn.btn--black {
+    color: var(--white-color);
+    background-color: var(--black-color);
+}
+
+.btn.btn--black:hover {
+    opacity: .8;
+}
+
+.btn.btn--medium {
+    min-width: 130px;
+}
+
+.btn.btn--large {
+    min-width: 160px;
+}
